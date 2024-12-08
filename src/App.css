@@ -1,0 +1,91 @@
+/* App.css */
+body {
+  background-color: #1c2331;
+  font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.chess-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.game-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align items to the top */
+  width: 1075px;
+  height: 560px; /* Increased height to match terminal */
+  background-color: #252c3a;
+  border-radius: 10px;
+  gap: 20px; /* Add gap between chessboard and terminal */
+}
+
+.chessboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  height: 100%; /* Match terminal height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.terminal-wrapper {
+  width: 575px;
+  height: 100%; /* Match chessboard height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.xterm-container {
+  height: 100%;
+  width: 100%;
+}
+
+.reset-board-container {
+  margin-top: 10px;
+}
+
+
+.reset-board-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -0px;
+}
+
+.reset-board-btn {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  padding: 12px 24px; /* Padding for the button */
+  border: none; /* Remove borders */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transform: scale(0.7); /* Scale the button down to 50% */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.reset-board-btn:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(0.6); /* Slightly larger on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.reset-board-btn:active {
+  background-color: #3e8e41; /* Even darker green on active */
+  transform: scale(0.5); /* Reset to original size on click */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
+}
+

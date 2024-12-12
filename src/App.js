@@ -195,7 +195,7 @@ function App() {
   // Check Engine Status
   const checkEngineStatus = useCallback(async () => {
     try {
-      const response = await axios.get("https://2a76-72-53-199-137.ngrok-free.app/api/engine-status", 
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/engine-status`, 
         {
           headers: {
             'ngrok-skip-browser-warning': '1'
@@ -245,7 +245,7 @@ function App() {
         }
       ]);
       
-      const response = await axios.post("https://2a76-72-53-199-137.ngrok-free.app/api/engine-move", { 
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/engine-move`, { 
         fen: chess.fen() 
       },{
         headers: {
@@ -330,7 +330,7 @@ function App() {
     setFen(newChess.fen());
     
     try {
-      await axios.post("https://2a76-72-53-199-137.ngrok-free.app/api/engine-move", { 
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/engine-move`, { 
         fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1' 
       }, {
         headers: {
